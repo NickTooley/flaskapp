@@ -21,7 +21,7 @@ def vote():
     #yes_votes = redis.get('yes')
     #no_votes = redis.get('no')
     #correct_votes = redis.get('no_one')
-    return render_template('results.html', yes_votes=redis.get('yes'), no_votes=redis.get('no'), correct_votes=redis.get('no_one'))
+    return render_template('results.html', yes_votes=redis.get('yes').decode('utf-8'), no_votes=redis.get('no').decode('utf-8'), correct_votes=redis.get('no_one').decode('utf-8'))
 
         
 
